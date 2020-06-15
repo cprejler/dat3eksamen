@@ -14,10 +14,9 @@ public class ApplicationConfig extends Application {
     }
 
     /**
-     * Do not modify addRestResourceClasses() method.
-     * It is automatically populated with
-     * all resources defined in the project.
-     * If required, comment out calling this method in getClasses().
+     * Do not modify addRestResourceClasses() method. It is automatically
+     * populated with all resources defined in the project. If required, comment
+     * out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(cors.CorsRequestFilter.class);
@@ -25,17 +24,17 @@ public class ApplicationConfig extends Application {
         resources.add(errorhandling.AuthenticationExceptionMapper.class);
         resources.add(errorhandling.GenericExceptionMapper.class);
         resources.add(org.glassfish.jersey.server.wadl.internal.WadlResource.class);
-        resources.add(rest.CatFactResource.class);
         resources.add(rest.DemoResource.class);
-        resources.add(rest.KanyeResource.class);
-        resources.add(rest.PokeResource.class);
+        resources.add(rest.MovieCacheResource.class);
+        resources.add(rest.MovieCountResource.class);
+        resources.add(rest.MovieImdbResource.class);
+        resources.add(rest.MovieRatingsResource.class);
+        resources.add(rest.MovieResource.class);
         resources.add(rest.RenameMeResource.class);
-        resources.add(rest.UsslessFactResource.class);
-        resources.add(rest.asyncdemo.class);
         resources.add(rest.populateDBResource.class);
         resources.add(security.JWTAuthenticationFilter.class);
         resources.add(security.LoginEndpoint.class);
         resources.add(security.RolesAllowedFilter.class);
     }
-    
+
 }

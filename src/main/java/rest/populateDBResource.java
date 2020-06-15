@@ -2,7 +2,7 @@ package rest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import dtos.CatFactDTO;
+
 import utils.EMF_Creator;
 import utils.SetupTestUsers; 
 import facades.FacadeExample;
@@ -24,7 +24,7 @@ public class populateDBResource {
 
     private static final EntityManagerFactory EMF = EMF_Creator.createEntityManagerFactory(
                 "pu",
-                "jdbc:mysql://localhost:3306/ca3",
+                "jdbc:mysql://localhost:3306/3semeksamen",
                 "dev",
                 "ax2",
                 EMF_Creator.Strategy.DROP_AND_CREATE);
@@ -42,5 +42,4 @@ public class populateDBResource {
         return "Hej";  //Done manually so no need for a DTO 
     }
 
- 
 }
