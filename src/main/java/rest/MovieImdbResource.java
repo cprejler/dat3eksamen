@@ -24,7 +24,7 @@ import javax.ws.rs.core.MediaType;
 import utils.HttpUtils;
 
 //Todo Remove or change relevant parts before ACTUAL use
-@RolesAllowed("user")
+@RolesAllowed({"user", "admin"})
 @Path("movie-info-imdb")
 public class MovieImdbResource {
 

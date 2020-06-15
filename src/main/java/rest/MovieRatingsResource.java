@@ -23,7 +23,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import utils.HttpUtils;
 
-@RolesAllowed("user")
+@RolesAllowed({"user", "admin"})
 @Path("movie-info-all-ratings")
 public class MovieRatingsResource {
 
